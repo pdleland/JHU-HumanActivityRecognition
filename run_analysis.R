@@ -78,7 +78,8 @@ df2 <- df %>%
     arrange(subject, activity)
    
 # write out tidy data set to physical CSV file 
-write.csv(df2,file="./final.csv", row.names = TRUE)
+write.csv(df2,file="./final.csv", row.names = FALSE)
+write.table(df2,file="./final.txt", row.names=FALSE)
 
 # use this to read the final tidy data set
 tidy_set <- read.csv("./final.csv", header = TRUE, sep = ",")
